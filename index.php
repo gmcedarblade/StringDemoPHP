@@ -73,7 +73,9 @@ and open the template in the editor.
         $greeting = "Good morning citizen!";
         echo "<h3>$greeting</h3>\n";
         echo "<h3>" . substr_replace($greeting, "Bye!", 4, 8) . "</h3>\n";
-
+        echo "<h3>Perhaps it should be... " . substr_replace($greeting, "riddance", 5, 7) . "</h3>\n";
+        echo "<h3>" . substr_replace($greeting, "VIETNAM!", 13) . "</h3>\n";
+        echo "<h3>$greeting</h3>\n";
         ?>
     </body>
 </html>
