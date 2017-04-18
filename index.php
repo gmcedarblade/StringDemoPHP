@@ -59,9 +59,23 @@ and open the template in the editor.
         /**
          * String replacement
          *
-         * substr(str, start pos, [length])
+         * substr(str, start pos, [length]) returns a string, specifically a string composed
+         * of the characters specified by the start position and length
          */
 
+        echo "<h3>". substr($str1, 1, 2) . "</h3>";
+        echo "<h3>" . substr($str3, 3, -2) . "</h3>";
+
+        /**
+         * substr_replace($str, $replacement, start pos, [length])
+         */
+
+        $greeting = "Good morning citizen!";
+        echo "<h3>$greeting</h3>\n";
+        echo "<h3>" . substr_replace($greeting, "Bye!", 4, 8) . "</h3>\n";
+        echo "<h3>Perhaps it should be... " . substr_replace($greeting, "riddance", 5, 7) . "</h3>\n";
+        echo "<h3>" . substr_replace($greeting, "VIETNAM!", 13) . "</h3>\n";
+        echo "<h3>$greeting</h3>\n";
         ?>
     </body>
 </html>
